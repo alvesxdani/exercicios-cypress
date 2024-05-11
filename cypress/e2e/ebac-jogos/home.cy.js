@@ -2,6 +2,7 @@
 
 describe('Testes para a home', () => {
   it('Deve renderezizar 4 vagas', () => {
+    cy.viewport("macbook-15","portrait")
     cy.visit('https://ebac-jobs-e2e.vercel.app/')
     cy.get('.ListaVagas_vagas__gmNZn > li').should('have.length', 4)
   })
